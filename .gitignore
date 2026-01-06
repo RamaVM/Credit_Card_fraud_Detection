@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+
+# Airflow
+airflow/logs/
+airflow/plugins/__pycache__/
+infrastructure/docker/airflow/logs/
+
+# Spark / Databricks
+checkpoints/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Snowflake exports / UI junk
+*.html
+*_files/
+*.download
+
+# Data files
+data/
+*.csv
+
+# Kafka
+logs/

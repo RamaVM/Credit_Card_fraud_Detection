@@ -1,0 +1,92 @@
+"D:\data_engineering\fraud_detection\checkpoints\s3_test"
+this s3_test should be delete before every work 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+D:\data_engineering\fraud_detection\infrastructure\docker>docker compose -f docker-compose.ingestion.yml down -v
+
+everytime it needs to do down -v 
+
+ after that  we can do this 
+time="2025-12-11T19:34:09+05:30" level=warning msg="D:\\data_engineering\\fraud_detection\\infrastructure\\docker\\docker-compose.ingestion.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+
+D:\data_engineering\fraud_detection\infrastructure\docker>docker compose -f docker-compose.ingestion.yml up -d
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Microsoft Windows [Version 10.0.26200.7462]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\data_engineering\fraud_detection\2_stream_processing\venv\Scripts>activate
+
+(venv) D:\data_engineering\fraud_detection\2_stream_processing\venv\Scripts>cd..
+
+(venv) D:\data_engineering\fraud_detection\2_stream_processing\venv>cd..
+
+(venv) D:\data_engineering\fraud_detection\2_stream_processing>python predict_step1.py
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Microsoft Windows [Version 10.0.26200.7462]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\data_engineering\fraud_detection\2_stream_processing\venv\Scripts>activate
+
+(venv) D:\data_engineering\fraud_detection\2_stream_processing\venv\Scripts>cd..
+
+(venv) D:\data_engineering\fraud_detection\2_stream_processing\venv>cd..
+
+(venv) D:\data_engineering\fraud_detection\2_stream_processing>cd alert_service
+
+(venv) D:\data_engineering\fraud_detection\2_stream_processing\alert_service>python email_alert_service
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Microsoft Windows [Version 10.0.26200.7462]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\data_engineering\fraud_detection\1_data_ingestion\venv\Scripts>activate
+
+(venv) D:\data_engineering\fraud_detection\1_data_ingestion\venv\Scripts>cd..
+
+(venv) D:\data_engineering\fraud_detection\1_data_ingestion\venv>cd..
+
+(venv) D:\data_engineering\fraud_detection\1_data_ingestion>cd producers
+
+(venv) D:\data_engineering\fraud_detection\1_data_ingestion\producers>python producer.py
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Microsoft Windows [Version 10.0.26200.7462]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\data_engineering\fraud_detection\1_data_ingestion\venv\Scripts>activate
+
+(venv) D:\data_engineering\fraud_detection\1_data_ingestion\venv\Scripts>cd..
+
+(venv) D:\data_engineering\fraud_detection\1_data_ingestion\venv>cd..
+
+(venv) D:\data_engineering\fraud_detection\1_data_ingestion>cd spark_jobs
+
+(venv) D:\data_engineering\fraud_detection\1_data_ingestion\spark_jobs>spark-submit clean_stream.py
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Microsoft Windows [Version 10.0.26200.7462]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\data_engineering\fraud_detection\2_stream_processing\venv\Scripts>activate
+
+(venv) D:\data_engineering\fraud_detection\2_stream_processing\venv\Scripts>cd..
+
+(venv) D:\data_engineering\fraud_detection\2_stream_processing\venv>cd..
+
+(venv) D:\data_engineering\fraud_detection\2_stream_processing>cd dashboard
+
+(venv) D:\data_engineering\fraud_detection\2_stream_processing\dashboard>streamlit run dashboard.py
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+"D:\data_engineering\fraud_detection\3_batch_processing\snowflake_sql\analytics_high_risk_patterns.sql"
+"D:\data_engineering\fraud_detection\3_batch_processing\snowflake_sql\copy_into.sql"
+"D:\data_engineering\fraud_detection\3_batch_processing\snowflake_sql\create_stage.sql"
+"D:\data_engineering\fraud_detection\3_batch_processing\snowflake_sql\create_table.sql"
+"D:\data_engineering\fraud_detection\3_batch_processing\snowflake_sql\daily_fraud_summary.sql"
+"D:\data_engineering\fraud_detection\3_batch_processing\snowflake_sql\fraud_amount_analysis.sql"
+"D:\data_engineering\fraud_detection\3_batch_processing\snowflake_sql\fraud_hourly_pattern.sql"
+"D:\data_engineering\fraud_detection\3_batch_processing\snowflake_sql\fraud_percentage_report.sql"
+"D:\data_engineering\fraud_detection\3_batch_processing\snowflake_sql\top_fraud_transactions.sql"
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

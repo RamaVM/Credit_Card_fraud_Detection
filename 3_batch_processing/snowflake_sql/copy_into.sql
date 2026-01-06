@@ -1,0 +1,5 @@
+COPY INTO creditcard_cleaned
+FROM @creditcard_parquet_stage
+FILE_FORMAT = (TYPE = PARQUET)
+MATCH_BY_COLUMN_NAME = CASE_INSENSITIVE
+ON_ERROR = 'SKIP_FILE';

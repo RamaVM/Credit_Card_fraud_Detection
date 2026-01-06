@@ -1,0 +1,9 @@
+data:
+  csv_path: "D:/data_engineering/fraud_detection/data/raw/creditcard.csv"
+
+kafka:
+  bootstrap_servers: "localhost:9092"
+  topic: "creditcard-transactions"
+
+producer:
+  rows_per_second: 1

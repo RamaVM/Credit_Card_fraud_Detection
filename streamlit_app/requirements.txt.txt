@@ -1,0 +1,8 @@
+streamlit
+pandas
+snowflake-connector-python
+plotly
+numpy
+pyyaml
+confluent-kafka
+streamlit-autorefresh

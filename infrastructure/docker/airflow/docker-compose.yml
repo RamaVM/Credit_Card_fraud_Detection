@@ -1,0 +1,24 @@
+services:
+  airflow:
+    container_name: airflow_container
+    image: apache/airflow:2.9.2
+    restart: always
+
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+
+    ports:
+      - "8080:8080"
+
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - "D:/data_engineering/fraud_detection/3_batch_processing/snowflake_sql:/opt/airflow/sql"
+      - "D:/data_engineering/fraud_detection/checkpoints/s3_test:/opt/airflow/s3_test"
+
+    entrypoint: >
+      /bin/bash -c "airflow db migrate &&
+      airflow users delete --username admin || true &&
+      airflow users create --username admin --password admin --firstname admin --lastname admin --role Admin --email admin@example.com &&
+      airflow webserver & sleep 5 &&
+      airflow scheduler"
