@@ -9,10 +9,10 @@ st.set_page_config(page_title="Snowflake + Streamlit", layout="wide")
 # ---------------------------------------------
 # Direct Snowflake credentials
 # ---------------------------------------------
-USER = "RAMAKRISHNAM"
-PASSWORD = "Ramakrishna118143"
-ACCOUNT = "RPJXZUZ-WG57165"
-DATABASE = "FRAUD_DETECTION_DB"
+USER = "***********"
+PASSWORD = "*********"
+ACCOUNT = "*******"
+DATABASE = "*********"
 SCHEMA = "RAW"
 WAREHOUSE = "COMPUTE_WH"
 ROLE = "ACCOUNTADMIN"
